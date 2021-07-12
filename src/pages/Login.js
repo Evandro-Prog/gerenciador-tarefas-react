@@ -35,6 +35,8 @@ const executaLogin = async evento => {
         console.log(e);
         if(e?.response?.data?.erro) {
             setMsgErro(e.response.data.erro);
+        }else{
+            setMsgErro('Não foi possível efetuar o login, fale com o administrador.')
         }        
     }
     setLoading(false);
